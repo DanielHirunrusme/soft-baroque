@@ -5,7 +5,7 @@ const app = new PIXI.Application();
 document.body.appendChild(app.view);
 
 // create a new background sprite
-const background = PIXI.Sprite.from("images/a.jpg");
+const background = PIXI.Sprite.from("/soft-baroque/images/a.jpg");
 background.width = 800;
 background.height = 600;
 app.stage.addChild(background);
@@ -19,7 +19,7 @@ app.stage.filterArea = app.screen;
 const dudeArray = [];
 
 const totaldudes = 20;
-const texture = PIXI.Texture.from("images/a.png");
+const texture = PIXI.Texture.from("/soft-baroque/images/a.jpg");
 
 for (let i = 0; i < totaldudes; i++) {
   // create a new Sprite that uses the image name that we just generated as its source

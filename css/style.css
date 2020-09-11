@@ -41,17 +41,58 @@ div {
 }
 #Img2 {
   background-image: url(../images/b.jpg);
-
-  mix-blend-mode: multiply;
 }
+#Img3 {
+  background-image: url(../images/c.JPG);
+}
+#Img4 {
+  background-image: url(../images/d.jpg);
+}
+#Img5 {
+  background-image: url(../images/e.jpg);
+}
+#Img6 {
+  background-image: url(../images/f.jpg);
+}
+#Img7 {
+  background-image: url(../images/g.jpg);
+}
+#Img8 {
+  background-image: url(../images/h.jpg);
+}
+#Img9 {
+  background-image: url(../images/i.jpg);
+}
+
 #feather div {
   outline: 25px solid #fff;
-  width: 50%;
-  box-shadow: 50px 50px 50px 10px white inset, -50px -50px 50px 10px white inset;
+  box-shadow: var(--in) var(--in) var(--in) 10px white inset,
+    var(--inNeg) var(--inNeg) var(--in) 10px white inset;
+  animation-name: inout;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  transition: transform 4s;
+  mix-blend-mode: multiply;
+  will-change: transform, box-shadow;
+}
+
+@keyframes inout {
+  0% {
+    box-shadow: var(--in) var(--in) var(--in) 10px white inset,
+      var(--inNeg) var(--inNeg) var(--in) 10px white inset;
+  }
+  50% {
+    box-shadow: var(--out) var(--out) var(--out) 10px white inset,
+      var(--outNeg) var(--outNeg) var(--out) 10px white inset;
+  }
+  100% {
+    box-shadow: var(--in) var(--in) var(--in) 10px white inset,
+      var(--inNeg) var(--inNeg) var(--in) 10px white inset;
+  }
 }
 
 h1 {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, 50%);

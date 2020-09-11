@@ -1,6 +1,10 @@
-const app = new PIXI.Application();
+const app = new PIXI.Application({
+  backgroundColor: 0xffffff,
+  autoResize: true,
+  resolution: devicePixelRatio,
+});
 document.body.appendChild(app.view);
-
+app.renderer.resize(window.innerWidth, window.innerHeight);
 // create two render textures... these dynamic textures will be used to draw the scene into itself
 let renderTexture = PIXI.RenderTexture.create(
   app.screen.width,
@@ -25,31 +29,27 @@ app.stage.addChild(outputSprite);
 
 const stuffContainer = new PIXI.Container();
 
-stuffContainer.x = 400;
-stuffContainer.y = 300;
+stuffContainer.x = window.innerWidth / 2;
+stuffContainer.y = window.innerHeight / 2;
 
 app.stage.addChild(stuffContainer);
 
 // create an array of image ids..
-const fruits = [
-  "examples/assets/rt_object_01.png",
-  "examples/assets/rt_object_02.png",
-  "examples/assets/rt_object_03.png",
-  "examples/assets/rt_object_04.png",
-  "examples/assets/rt_object_05.png",
-  "examples/assets/rt_object_06.png",
-  "examples/assets/rt_object_07.png",
-  "examples/assets/rt_object_08.png",
-];
+const textures = ["a", "d", "e", "f", "g", "h", "i"];
 
 // create an array of items
 const items = [];
 
 // now create some items and randomly position them in the stuff container
-for (let i = 0; i < 20; i++) {
-  const item = PIXI.Sprite.from(fruits[i % fruits.length]);
-  item.x = Math.random() * 400 - 200;
-  item.y = Math.random() * 400 - 200;
+for (let i = 0; i < textures.length; i++) {
+  let tex = textures[i];
+  const item = PIXI.Sprite.from(
+    `https://danielhirunrusme.github.io/soft-baroque/images/${tex}.jpg`
+  );
+  item.x = Math.random() * window.innerWidth;
+  item.y = Math.random() * window.innerHeight;
+  item.width = 100;
+  item.height = 100;
   item.anchor.set(0.5);
   stuffContainer.addChild(item);
   items.push(item);
@@ -76,8 +76,8 @@ app.ticker.add(() => {
   outputSprite.texture = renderTexture;
 
   // twist this up!
-  stuffContainer.rotation -= 0.01;
-  outputSprite.scale.set(1 + Math.sin(count) * 0.2);
+  stuffContainer.rotation -= 0.001;
+  outputSprite.scale.set(1 + Math.sin(count) * 0.02);
 
   // render the stage to the texture
   // the 'true' clears the texture before the content is rendered

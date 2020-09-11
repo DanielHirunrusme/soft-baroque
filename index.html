@@ -1,37 +1,178 @@
 <html>
   <head>
     <title>Soft Baroque</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-  <body>
-    <div>
-      <img src="images/a.jpg" />
+  <body id="root">
+    <div class="flex">
+      <div>
+        <img id="img-1" src="images/a.jpg" />
+        <svg id="svg-1" viewBox="0 0 1000 1000">
+          <clipPath id="blobmasking-1">
+            <path id="blob-1"></path>
+          </clipPath>
+          <image
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            xlink:href="images/a.jpg"
+            clip-path="url(#blobmasking-1)"
+          />
+        </svg>
+      </div>
+      <div>
+        <img id="img-2" src="images/b.JPG" />
+        <svg id="svg-2" viewBox="0 0 1000 1000">
+          <image
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            xlink:href="images/b.JPG"
+            clip-path="url(#blobmasking-2)"
+          />
+          <clipPath id="blobmasking-2">
+            <path id="blob-2"></path>
+          </clipPath>
+        </svg>
+      </div>
+      <div>
+        <img id="img-3" src="images/c.JPG" />
+        <svg id="svg-3" viewBox="0 0 1000 1000">
+          <image
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            xlink:href="images/c.jpg"
+            clip-path="url(#blobmasking-3)"
+          />
+          <clipPath id="blobmasking-3">
+            <path id="blob-3"></path>
+          </clipPath>
+        </svg>
+      </div>
+      <div>
+        <img id="img-4" src="images/d.jpg" />
+        <svg id="svg-4" viewBox="0 0 1000 1000">
+          <image
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            xlink:href="images/d.jpg"
+            clip-path="url(#blobmasking-4)"
+          />
+          <clipPath id="blobmasking-4">
+            <path id="blob-4"></path>
+          </clipPath>
+        </svg>
+      </div>
+      <div>
+        <img id="img-5" src="images/e.jpg" />
+        <svg id="svg-5" viewBox="0 0 1000 1000">
+          <image
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            xlink:href="images/e.jpg"
+            clip-path="url(#blobmasking-5)"
+          />
+          <clipPath id="blobmasking-5">
+            <path id="blob-5"></path>
+          </clipPath>
+        </svg>
+      </div>
+      <div>
+        <img id="img-6" src="images/f.jpg" />
+        <svg id="svg-6" viewBox="0 0 1000 1000">
+          <image
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            xlink:href="images/f.jpg"
+            clip-path="url(#blobmasking-6)"
+          />
+          <clipPath id="blobmasking-6">
+            <path id="blob-6"></path>
+          </clipPath>
+        </svg>
+      </div>
+      <div>
+        <img id="img-7" src="images/g.jpg" />
+        <svg id="svg-7" viewBox="0 0 1000 1000">
+          <image
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            xlink:href="images/g.jpg"
+            clip-path="url(#blobmasking-7)"
+          />
+          <clipPath id="blobmasking-7">
+            <path id="blob-7"></path>
+          </clipPath>
+        </svg>
+      </div>
+      <div>
+        <img id="img-8" src="images/h.jpg" />
+        <svg id="svg-8" viewBox="0 0 1000 1000">
+          <image
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            xlink:href="images/h.jpg"
+            clip-path="url(#blobmasking-8)"
+          />
+          <clipPath id="blobmasking-8">
+            <path id="blob-8"></path>
+          </clipPath>
+        </svg>
+      </div>
+      <div>
+        <img id="img-9" src="images/i.jpg" />
+        <svg id="svg-9" viewBox="0 0 1000 1000">
+          <image
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            xlink:href="images/i.jpg"
+            clip-path="url(#blobmasking-9)"
+          />
+          <clipPath id="blobmasking-9">
+            <path id="blob-9"></path>
+          </clipPath>
+        </svg>
+      </div>
+      <div>
+        <img id="img-10" src="images/j.jpg" />
+        <svg id="svg-10" viewBox="0 0 1000 1000">
+          <image
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            xlink:href="images/j.jpg"
+            clip-path="url(#blobmasking-10)"
+          />
+          <clipPath id="blobmasking-10">
+            <path id="blob-10"></path>
+          </clipPath>
+        </svg>
+      </div>
     </div>
-    <div>
-      <img src="images/b.JPG" />
-    </div>
-    <div>
-      <img src="images/c.JPG" />
-    </div>
-    <div>
-      <img src="images/d.jpg" />
-    </div>
-    <div>
-      <img src="images/e.jpg" />
-    </div>
-    <div>
-      <img src="images/f.jpg" />
-    </div>
-    <div>
-      <img src="images/g.jpg" />
-    </div>
-    <div>
-      <img src="images/h.jpg" />
-    </div>
-    <div>
-      <img src="images/i.jpg" />
-    </div>
-    <div>
-      <img src="images/j.jpg" />
-    </div>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

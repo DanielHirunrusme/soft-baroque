@@ -34,7 +34,8 @@ div {
 
 body,
 html {
-  cursor: url("../images/cirle.svg"), move;
+  cursor: url("https://danielhirunrusme.github.io/soft-baroque/images/circle.svg"),
+    move;
 }
 
 div {

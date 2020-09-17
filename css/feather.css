@@ -10,7 +10,6 @@ body::-webkit-scrollbar {
     url("GerstnerBQ-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
 }
 
 img {
@@ -26,6 +25,13 @@ div {
 .flex {
   display: flex;
   flex-wrap: wrap;
+  opacity: 0;
+  animation-name: fadeIn;
+  will-change: opacity;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 .flex > div {
@@ -71,7 +77,7 @@ div {
   background-image: url(../images/i.jpg);
 }
 
-#feather div {
+.image.in-view {
   outline: 25px solid #fff;
   box-shadow: var(--in) var(--in) var(--in) 10px white inset,
     var(--inNeg) var(--inNeg) var(--in) 10px white inset;
@@ -79,8 +85,15 @@ div {
   animation-duration: 8s;
   animation-iteration-count: infinite;
   transition: transform 4s;
-  mix-blend-mode: multiply;
+
   will-change: transform, box-shadow;
+}
+
+.imageContainer {
+  mix-blend-mode: multiply;
+  transform-origin: center;
+  animation-duration: 6s;
+  -webkit-animation-duration: 6s;
 }
 
 @keyframes inout {
@@ -98,14 +111,33 @@ div {
   }
 }
 
+@keyframes fadeOut {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #MenuButton {
-  width: 4vw;
-  height: 4vw;
-  border-radius: 20vw;
-  border: none;
-  background-color: #000000;
   margin: 20px;
   position: fixed;
+  border: none;
+  background: none;
+
+  padding: 0;
 }
 
 h1 {
@@ -121,4 +153,10 @@ h1 {
   margin: 0;
   text-align: center;
   font-family: "Gerstner BQ";
+  animation-name: fadeOut;
+  will-change: opacity;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }

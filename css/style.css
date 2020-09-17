@@ -81,7 +81,7 @@ div {
   animation-duration: 8s;
   animation-iteration-count: infinite;
   transition: transform 4s;
-  mix-blend-mode: multiply;
+  /*mix-blend-mode: multiply;*/
   will-change: transform, box-shadow;
 }
 

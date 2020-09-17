@@ -136,7 +136,7 @@ div {
   position: fixed;
   border: none;
   background: none;
-
+  z-index: 9999;
   padding: 0;
 }
 

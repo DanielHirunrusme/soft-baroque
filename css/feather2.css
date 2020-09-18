@@ -1,0 +1,160 @@
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+@font-face {
+  font-family: "Gerstner BQ";
+  src: url("GerstnerBQ-Light.woff2") format("woff2"),
+    url("GerstnerBQ-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+img {
+  display: block;
+  width: 100%;
+  opacity: 0;
+}
+
+div {
+  position: relative;
+}
+
+svg circle {
+  transition: all 5s ease-in;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation-name: fadeIn;
+  will-change: opacity;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.flex > div {
+  width: 50%;
+}
+
+div {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#Img1 {
+  background-image: url(../images/a.jpg);
+}
+#Img2 {
+  background-image: url(../images/b.jpg);
+}
+#Img3 {
+  background-image: url(../images/c.JPG);
+}
+#Img4 {
+  background-image: url(../images/d.jpg);
+}
+#Img5 {
+  background-image: url(../images/e.jpg);
+}
+#Img6 {
+  background-image: url(../images/f.jpg);
+}
+#Img7 {
+  background-image: url(../images/g.jpg);
+}
+#Img8 {
+  background-image: url(../images/h.jpg);
+}
+#Img9 {
+  background-image: url(../images/i.jpg);
+}
+
+.image.in-view {
+  outline: 25px solid #fff;
+  box-shadow: var(--in) var(--in) var(--in) 10px white inset,
+    var(--inNeg) var(--inNeg) var(--in) 10px white inset;
+  animation-name: inout;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  transition: transform 4s;
+
+  will-change: transform, box-shadow;
+}
+
+.imageContainer {
+  mix-blend-mode: multiply;
+  transform-origin: center;
+  animation-duration: 6s;
+  -webkit-animation-duration: 6s;
+}
+
+@keyframes inout {
+  0% {
+    box-shadow: var(--in) var(--in) var(--in) 10px white inset,
+      var(--inNeg) var(--inNeg) var(--in) 10px white inset;
+  }
+  50% {
+    box-shadow: var(--out) var(--out) var(--out) 10px white inset,
+      var(--outNeg) var(--outNeg) var(--out) 10px white inset;
+  }
+  100% {
+    box-shadow: var(--in) var(--in) var(--in) 10px white inset,
+      var(--inNeg) var(--inNeg) var(--in) 10px white inset;
+  }
+}
+
+@keyframes fadeOut {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#MenuButton {
+  margin: 20px;
+  position: fixed;
+  border: none;
+  background: none;
+  z-index: 9999;
+  padding: 0;
+}
+
+h1 {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  z-index: 2;
+  font-size: 23vw;
+  line-height: 0.85;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+  font-family: "Gerstner BQ";
+  animation-name: fadeOut;
+  will-change: opacity;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}

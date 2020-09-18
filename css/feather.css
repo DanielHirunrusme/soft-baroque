@@ -38,12 +38,6 @@ div {
   width: 50%;
 }
 
-body,
-html {
-  cursor: url("https://danielhirunrusme.github.io/soft-baroque/images/circle.svg"),
-    move;
-}
-
 div {
   background-size: 100%;
   background-position: center;

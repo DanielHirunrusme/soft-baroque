@@ -49,7 +49,7 @@ $(document).ready(function () {
   }
 
   function addMasks(i, w, h) {
-    let numMasks = Math.floor(Math.random() * 40);
+    let numMasks = Math.floor(Math.random() * 200);
     let masks = [];
     let maxRectW = w - 100;
     let maxRectH = w - 100;
